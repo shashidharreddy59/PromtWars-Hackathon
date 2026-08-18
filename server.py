@@ -908,9 +908,23 @@ static_dir = os.path.join(os.path.dirname(__file__), "public")
 if os.path.exists(static_dir):
     app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
+@app.get("/style.css")
+def serve_style_css():
+    css_file = os.path.join(static_dir, "style.css")
+    if os.path.exists(css_file):
+        return FileResponse(css_file, media_type="text/css")
+    raise HTTPException(status_code=404, detail="CSS file not found")
+
+@app.get("/app.js")
+def serve_app_js():
+    js_file = os.path.join(static_dir, "app.js")
+    if os.path.exists(js_file):
+        return FileResponse(js_file, media_type="application/javascript")
+    raise HTTPException(status_code=404, detail="JS file not found")
+
 @app.get("/")
 def serve_index():
-    index_file = os.path.join(os.path.dirname(__file__), "public", "index.html")
+    index_file = os.path.join(static_dir, "index.html")
     if os.path.exists(index_file):
         return FileResponse(index_file)
     return {"message": "Antigravity AI Reel Recommendation Agent API is running."}
