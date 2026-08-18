@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antigravity | Real-Time Social Media Reel Prediction AI Agent</title>
+  <meta name="description" content="Predictive AI Agent that transforms real-time social media reel engagement into high-signal, zero-hype computer science and tech learning pathways.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="theme-dark">
+  <!-- Top-of-Site Notification Banner (Floating Alert) -->
+  <div class="top-notification-banner" id="topNotificationBanner" role="status" aria-live="polite">
+    <div class="top-notif-icon" id="topNotifIcon">🎉</div>
+    <div class="top-notif-content">
+      <span class="top-notif-badge" id="topNotifBadge">100% COMPLETED</span>
+      <span class="top-notif-text" id="topNotifText">Reel completed! Synthesizing next fresh topic...</span>
+    </div>
+  </div>
+
+  <!-- Glowing Atmospheric Background Orbs -->
+  <div class="app-background">
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <div class="layout-wrapper">
+    <!-- Top Navigation Bar -->
+    <header class="app-header">
+      <div class="header-brand">
+        <div class="logo-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+            <path d="M5 3v4"/>
+            <path d="M19 17v4"/>
+            <path d="M3 5h4"/>
+            <path d="M17 19h4"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="brand-title">Antigravity <span>Reel Predictor AI</span></h1>
+          <p class="brand-subtitle">Real-Time Social Media Reel Intelligence &amp; Zero-Hype Tech Learning Bridges</p>
+        </div>
+      </div>
+
+      <!-- Main Navigation Tabs -->
+      <nav class="nav-tabs" aria-label="Main Navigation">
+        <button class="nav-tab-btn active" id="navTabFeed" data-view="viewFeed">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+          <span>Live Reel Feed &amp; AI HUD</span>
+          <span class="nav-pill-pulse">LIVE</span>
+        </button>
+        <button class="nav-tab-btn" id="navTabStudio" data-view="viewStudio">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+          <span>AI Studio &amp; Batch</span>
+        </button>
+        <button class="nav-tab-btn" id="navTabVeo" data-view="viewVeo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect width="14" height="14" x="1" y="5" rx="2" ry="2"/></svg>
+          <span>✨ Gemini Veo AI Reels</span>
+          <span class="nav-pill-pulse" style="background: linear-gradient(135deg, #8b5cf6, #ec4899); color: #fff;">4K 3D</span>
+        </button>
+        <button class="nav-tab-btn" id="navTabInsta" data-view="viewInsta">
+          <span style="font-size: 1.05rem;">📸</span>
+          <span>Insta Reels</span>
+          <span class="nav-pill-pulse" style="background: linear-gradient(135deg, #e1306c, #833ab4); color: #fff;">SYNCED</span>
+        </button>
+        <button class="nav-tab-btn" id="navTabRadar" data-view="viewRadar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8Z"/><path d="M12 6a6 6 0 1 0 6 6 6 6 0 0 0-6-6Zm0 10a4 4 0 1 1 4-4 4 4 0 0 1-4 4Z"/><line x1="12" y1="12" x2="19" y2="5"/></svg>
+          <span>Viral Trend Radar</span>
+        </button>
+      </nav>
+
+      <!-- Utility Controls -->
+      <div class="header-controls">
+        <!-- Instagram Account Connection & Sync Hub -->
+        <button class="btn btn-instagram-header" id="btnInstagramHeader" title="Connect Instagram account to sync liked reels & technical learning pathways">
+          <span class="ig-icon">📸</span>
+          <span id="igHeaderStatusText">Connect Instagram</span>
+          <span class="ig-liked-count-badge hidden" id="igHeaderLikedBadge">0 Liked</span>
+        </button>
+
+        <!-- Quick Add N Reels by Interest Button -->
+        <button class="btn btn-primary btn-sm btn-glow-subtle" id="btnOpenAddReelsModalTop" title="Add N Reels by your Interests">
+          <span>🎯 Add N Reels</span>
+        </button>
+
+        <button class="btn btn-ghost sound-toggle-btn" id="soundToggleBtn" title="Toggle Sound FX">
+          <span id="soundIcon">🔊</span>
+          <span id="soundLabel">Sound ON</span>
+        </button>
+
+        <button class="btn btn-ghost" id="configToggleBtn" title="LLM Configuration">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>Model Engine</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Config Drawer / Modal -->
+    <section class="config-panel collapsed" id="configPanel">
+      <div class="config-grid">
+        <div class="config-field">
+          <label for="providerSelect">Prediction Provider Engine</label>
+          <select id="providerSelect" class="form-input">
+            <option value="auto">Auto (Detect Key or High-Signal Heuristics)</option>
+            <option value="gemini">Google Gemini (Gemini 2.5 Flash / 3.7)</option>
+            <option value="openai">OpenAI (GPT-4o / GPT-4o-mini)</option>
+            <option value="offline">Offline High-Signal CS Engine (Zero-Latency)</option>
+          </select>
+        </div>
+        <div class="config-field">
+          <label for="apiKeyInput">API Key (Optional / Stored locally)</label>
+          <div class="input-with-action">
+            <input type="password" id="apiKeyInput" class="form-input" placeholder="AIzaSy... or sk-proj-...">
+            <button class="btn btn-icon" id="toggleKeyVisibility" type="button" title="Show/Hide Key">👁️</button>
+          </div>
+        </div>
+        <div class="config-field">
+          <label for="modelInput">Model Name Override</label>
+          <input type="text" id="modelInput" class="form-input" placeholder="e.g. gemini-2.5-flash or gpt-4o">
+        </div>
+      </div>
+      <div class="config-note">
+        <span class="shield-icon">🛡️</span>
+        <span><strong>Anti-Hype Guardrails &amp; CS Grounding:</strong> Zero clickbait. Filters superficial listicles and anchors suggestions to core CS foundations.</span>
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- VIEW 1: LIVE SOCIAL REEL FEED & REAL-TIME AI HUD        -->
+    <!-- ======================================================= -->
+    <main class="app-view active" id="viewFeed">
+      <!-- Smart Stream Control Bar -->
+      <div class="stream-control-bar">
+        <div class="stream-left-controls">
+          <button class="btn btn-secondary btn-sm" id="btnOpenAddReelsModal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <span>Add N Reels by Interest</span>
+          </button>
+
+          <button class="btn btn-ghost btn-sm tracker-badge-btn" id="btnOpenHistoryModal" title="View Watched History & Deduplication Tracker">
+            <span class="status-dot green"></span>
+            <span id="seenTrackerLabel">Watched: 1 unique • 0 repeats</span>
+          </button>
+        </div>
+
+        <div class="stream-right-controls">
+          <label class="toggle-switch-wrap" title="When you watch a reel completely (100%), automatically recommend & transition to a brand-new non-repeating reel based on your interest">
+            <span class="toggle-label">Auto-Advance on 100% Watch:</span>
+            <input type="checkbox" id="autoAdvanceToggle" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="feed-layout">
+        <!-- Phone Reel Player Container -->
+        <div class="phone-column">
+          <div class="phone-frame">
+            <div class="phone-notch">
+              <span class="phone-camera"></span>
+              <span class="phone-speaker"></span>
+            </div>
+
+            <!-- Top Reel Header Status -->
+            <div class="phone-top-bar">
+              <span class="feed-mode-badge"><span class="pulse-dot"></span> LIVE REEL STREAM</span>
+              <button class="btn-veo-launch" id="btnWatchReelVeo" title="Watch 4K AI Video Explanation generated by Google Gemini Veo">
+                <span class="veo-sparkle">✨</span> <span>Veo 3D Reel</span>
+              </button>
+              <span class="reel-index-indicator" id="reelIndexIndicator">Reel 1 / 8</span>
+            </div>
+
+            <!-- Active Reel Media Canvas -->
+            <div class="phone-screen" id="phoneScreen">
+              <!-- Full-Bleed 9:16 Procedural 3D AI Video Simulation Canvas -->
+              <canvas class="reel-video-canvas" id="reelVideoCanvas" width="450" height="800"></canvas>
+
+              <!-- Video Camera Telemetry HUD -->
+              <div class="reel-cam-hud" id="reelFeedCamHud">
+                <span class="pulse-dot"></span> <span>CAM_01 [WIDE DOLLY 24MM] • 4K 60FPS • VEO 2 CORE</span>
+              </div>
+
+              <!-- Synchronized Real-time Subtitles / Voiceover Bar -->
+              <div class="reel-feed-subtitles-bar" id="reelFeedSubtitlesBar">
+                <span class="veo-sub-icon">🗣️</span>
+                <span class="veo-sub-text" id="reelFeedSubtitleText">Synthesizing real-time AI concept explanation...</span>
+              </div>
+
+              <!-- Interactive Keyframe Timeline Chips -->
+              <div class="reel-feed-keyframes-bar" id="reelFeedKeyframesBar">
+                <button class="rf-kf-chip active" id="rfKfChip0" data-sec="0.0"><span>0.0s</span> <strong>Hook</strong></button>
+                <button class="rf-kf-chip" id="rfKfChip1" data-sec="4.5"><span>4.5s</span> <strong>Architecture</strong></button>
+                <button class="rf-kf-chip" id="rfKfChip2" data-sec="9.5"><span>9.5s</span> <strong>Scale</strong></button>
+              </div>
+
+              <!-- Reel Video Progress Bar -->
+              <div class="reel-progress-track">
+                <div class="reel-progress-bar" id="reelProgressBar"></div>
+              </div>
+
+              <!-- Completion & Smart Suggestion Popup Overlay -->
+              <div class="completion-overlay hidden" id="completionOverlay">
+                <div class="completion-card">
+                  <div class="comp-icon">🎉</div>
+                  <div class="comp-title">100% Watched!</div>
+                  <div class="comp-subtitle" id="completionMessage">Suggesting next fresh reel based on your interests...</div>
+                  <div class="comp-bar"><div class="comp-bar-inner"></div></div>
+                </div>
+              </div>
+
+              <!-- Reel Overlay Information -->
+              <div class="reel-overlay-content">
+                <div class="reel-badge-pill" id="reelBadgePill">✨ 4K AI Video Masterclass</div>
+                
+                <div class="creator-row">
+                  <div class="creator-avatar" id="creatorAvatar">🧠</div>
+                  <div class="creator-meta">
+                    <div class="creator-name" id="creatorName">@antigravity_ai</div>
+                    <div class="creator-audio" id="creatorAudio">
+                      <span class="audio-wave">
+                        <span></span><span></span><span></span><span></span>
+                      </span>
+                      <span id="audioTrackName">Veo 2 Neural Synth - 4K Spatial Audio</span>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 class="reel-title" id="reelTitle">Transformer Attention KV-Cache Decoupling</h3>
+                <p class="reel-description" id="reelDescription">Real-time 4K 60FPS 3D explanation of attention mechanisms and VRAM footprint.</p>
+              </div>
+
+              <!-- Reel Action Buttons Sidebar -->
+              <div class="reel-action-bar">
+                <button class="action-btn" id="btnLike" title="Like Reel">
+                  <div class="action-icon-wrap" id="likeIconWrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                  </div>
+                  <span class="action-label" id="likeCountLabel">42.1K</span>
+                </button>
+
+                <button class="action-btn" id="btnReplay" title="Replay &amp; Signal Interest">
+                  <div class="action-icon-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>
+                  </div>
+                  <span class="action-label" id="replayCountLabel">Replay (0)</span>
+                </button>
+
+                <button class="action-btn" id="btnBookmark" title="Save to Bookmarks">
+                  <div class="action-icon-wrap" id="bookmarkIconWrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                  </div>
+                  <span class="action-label" id="bookmarkCountLabel">Save</span>
+                </button>
+
+                <button class="action-btn" id="btnShare" title="Share Reel">
+                  <div class="action-icon-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                  </div>
+                  <span class="action-label">Share</span>
+                </button>
+
+                <button class="action-btn" id="btnPlayPause" title="Play / Pause">
+                  <div class="action-icon-wrap" id="playPauseIconWrap">
+                    <span>⏸️</span>
+                  </div>
+                  <span class="action-label" id="playPauseLabel">Pause</span>
+                </button>
+              </div>
+
+              <!-- Center Tap Play/Pause Indicator Overlay -->
+              <div class="reel-center-play-indicator" id="reelCenterPlayIndicator">
+                <div class="rc-circle" id="rcCircleIcon">⏸️</div>
+              </div>
+
+              <!-- Double-Tap Heart Burst Overlay -->
+              <div class="double-tap-heart-burst" id="doubleTapHeartBurst"></div>
+
+              <!-- Floating Hearts Spawn Container -->
+              <div class="hearts-container" id="heartsContainer"></div>
+            </div>
+
+            <!-- Phone Navigation Swipe Controls -->
+            <div class="phone-nav-bar">
+              <button class="btn btn-secondary btn-sm" id="btnPrevReel" title="Previous Reel (Key: Up)">
+                ▲ Previous
+              </button>
+              <div class="swipe-hint">
+                <span>Swipe / Keys ↑ ↓</span>
+              </div>
+              <button class="btn btn-primary btn-sm" id="btnNextReel" title="Next Reel (Key: Down)">
+                Next ▼
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-Time AI Telemetry & Suggestion HUD -->
+        <div class="hud-column">
+          <!-- Real-Time Watch Telemetry Box -->
+          <div class="hud-card telemetry-card">
+            <div class="card-header-row">
+              <div class="hud-tag"><span class="pulse-dot"></span> REAL-TIME ENGAGEMENT TELEMETRY</div>
+              <span class="signal-badge" id="hudSignalBadge">Signal: Low</span>
+            </div>
+
+            <div class="telemetry-grid">
+              <div class="telemetry-stat">
+                <div class="stat-value" id="hudWatchTime">0.0s</div>
+                <div class="stat-label">Watch Duration</div>
+              </div>
+              <div class="telemetry-stat">
+                <div class="stat-value" id="hudLoopCount">0</div>
+                <div class="stat-label">Replay Loops</div>
+              </div>
+              <div class="telemetry-stat">
+                <div class="stat-value" id="hudEngagementRate">18%</div>
+                <div class="stat-label">Intent Intensity</div>
+              </div>
+              <div class="telemetry-stat">
+                <div class="stat-value" id="hudSignalActions">None</div>
+                <div class="stat-label">Actions Logged</div>
+              </div>
+            </div>
+
+            <div class="telemetry-log" id="hudTelemetryLog">
+              <div class="log-line"><span>[SYSTEM]</span> AI Telemetry listener active on Reel #1...</div>
+            </div>
+          </div>
+
+          <!-- Deep Context & Prediction Card -->
+          <div class="hud-card prediction-card">
+            <div class="card-header-row">
+              <div class="hud-tag">🧠 DEEP INTENT INFERENCE &amp; PREDICTION</div>
+              <span class="category-tag-pill" id="hudCategoryPill">Java</span>
+            </div>
+
+            <div class="prediction-section">
+              <div class="section-subtitle">INFERRED ROOT CS DISCIPLINE (NO KEYWORD MATCHING):</div>
+              <div class="cs-topic-badge" id="hudInferredTopic">
+                Compiler Lexical Analysis, AST Generation &amp; JVM Bytecode Mechanics
+              </div>
+              <p class="inference-rationale" id="hudInferenceWhy">
+                Engagement with syntax error frustration indicates coding friction; bridging this to compiler parsing mechanics elevates casual debugging to computer science fundamentals.
+              </p>
+            </div>
+
+            <!-- Anti-Hype & Guardrail Meter -->
+            <div class="guardrail-row">
+              <div class="guardrail-item">
+                <span class="guard-label">Anti-Hype Filter:</span>
+                <span class="guard-val guard-pass">✅ PASS (Zero Clickbait)</span>
+              </div>
+              <div class="guardrail-item">
+                <span class="guard-label">Confidence:</span>
+                <span class="guard-val" id="hudConfidenceVal">98% (High)</span>
+              </div>
+              <div class="guardrail-item">
+                <span class="guard-label">Difficulty Level:</span>
+                <span class="guard-val" id="hudDifficultyVal">Intermediate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Synthesized Educational Bridge Reel -->
+          <div class="hud-card bridge-card">
+            <div class="card-header-row">
+              <div class="hud-tag">🚀 AI SUGGESTED EDUCATIONAL TECH BRIDGE</div>
+              <span class="bridge-tag">Zero-Hype Masterclass</span>
+            </div>
+
+            <div class="bridge-content">
+              <h4 class="bridge-target-title" id="hudBridgeTitle">
+                How Compilers Find Syntax Errors: Lexing, Parsing &amp; Abstract Syntax Trees (ASTs)
+              </h4>
+              <p class="bridge-target-why" id="hudBridgeWhy">
+                Bridges the annoyance of syntax errors into an understanding of tokenization, recursive descent parsing, and how static analyzers flag bugs before execution.
+              </p>
+            </div>
+
+            <!-- Bridge Actions -->
+            <div class="bridge-actions-grid">
+              <button class="btn btn-primary btn-glow" id="btnInjectBridge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>Inject Bridge Into Feed</span>
+              </button>
+
+              <button class="btn btn-accent btn-glow" id="btnOpenVeoBridge" title="Watch 4K AI Video Explanation generated by Google Gemini Veo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect width="14" height="14" x="1" y="5" rx="2" ry="2"/></svg>
+                <span>✨ Watch Veo 3D Reel</span>
+              </button>
+
+              <button class="btn btn-secondary" id="btnOpenChallenge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <span>15-Min Micro-Lab</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ======================================================= -->
+    <!-- VIEW 2: AI AGENT STUDIO & BATCH PREDICTOR               -->
+    <!-- ======================================================= -->
+    <main class="app-view hidden" id="viewStudio">
+      <div class="studio-layout">
+        <!-- Left Column: Input Workbench -->
+        <section class="workbench-column">
+          <div class="panel-card">
+            <div class="tabs-header">
+              <button class="tab-btn active" id="tabPresetsBtn">Curated Presets Library (8 Domains)</button>
+              <button class="tab-btn" id="tabCustomBtn">Custom Reel Simulator</button>
+            </div>
+
+            <!-- Presets Tab Content -->
+            <div class="tab-content" id="presetsTab">
+              <div class="presets-intro">
+                <p>Select any sample reel to evaluate individually, or trigger a full batch evaluation across diverse categories.</p>
+                <button class="btn btn-primary btn-block" id="btnAnalyzeAllPresets">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span>Evaluate All 8 Curated Reels in Batch</span>
+                </button>
+              </div>
+
+              <div class="preset-list" id="presetListContainer">
+                <div class="loading-spinner">Loading presets...</div>
+              </div>
+            </div>
+
+            <!-- Custom Reel Tab Content -->
+            <div class="tab-content hidden" id="customTab">
+              <form id="customReelForm" class="custom-form">
+                <div class="form-group">
+                  <label for="customId">Reel Identifier / URL</label>
+                  <input type="text" id="customId" class="form-input" value="Custom_Reel_01" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="customTitle">Reel Title / Content Transcript</label>
+                  <textarea id="customTitle" class="form-input" rows="3" placeholder="e.g. Trying to build a neural network in Excel at 3 AM" required>Trying to build a neural network in Excel at 3 AM and seeing matrix multiplication break</textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="customTone">Tone, Themes &amp; Vibe</label>
+                  <input type="text" id="customTone" class="form-input" value="Humorous frustration with manual matrix calculations and gradient math">
+                </div>
+
+                <div class="form-group">
+                  <label for="customEngagement">User Engagement Telemetry</label>
+                  <select id="customEngagement" class="form-input">
+                    <option value="Completed, replayed twice">Completed, replayed twice (High Signal)</option>
+                    <option value="Saved to bookmarks">Saved to bookmarks (High Signal)</option>
+                    <option value="Completed, liked">Completed, liked (Medium Signal)</option>
+                    <option value="Shared with 3 developer friends">Shared with friends (High Signal)</option>
+                    <option value="Watched 80%">Watched 80% (Moderate Signal)</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="btnAnalyzeCustom">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  <span>Run Agent Inference &amp; Prediction</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Categories & Taxonomy Card -->
+          <div class="panel-card categories-overview-card">
+            <h4 class="card-title">Technical Taxonomy Domains</h4>
+            <div class="category-pills" id="categoryPillsContainer">
+              <!-- Populated via API -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Column: Recommendation Stream & Output -->
+        <section class="results-column">
+          <div class="panel-card results-header-card">
+            <div class="results-meta-row">
+              <div>
+                <h3 class="panel-heading">Generated Tech Learning Pathways</h3>
+                <p class="results-count" id="resultsCountText">Displaying recommendations evaluated by AI Agent</p>
+              </div>
+
+              <div class="export-actions">
+                <button class="btn btn-secondary btn-sm" id="btnCopyJson" title="Copy results as JSON">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                  <span>Copy JSON</span>
+                </button>
+                <button class="btn btn-secondary btn-sm" id="btnCopySchema" title="Copy in exact prompt text schema">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                  <span>Copy Text Schema</span>
+                </button>
+                <button class="btn btn-secondary btn-sm" id="btnDownloadMd" title="Download Markdown report">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="12" x2="19" y2="3"/></svg>
+                  <span>Export MD</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recommendations Container -->
+          <div class="recommendations-stream" id="recommendationsStream">
+            <div class="empty-state">
+              <div class="empty-icon">💡</div>
+              <h4>No Reels Evaluated Yet</h4>
+              <p>Select one of the curated presets on the left or enter a custom reel description to trigger the AI agent evaluation.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ======================================================= -->
+    <!-- VIEW 3: VIRAL TREND RADAR & PREDICTIVE ANALYTICS        -->
+    <!-- ======================================================= -->
+    <main class="app-view hidden" id="viewRadar">
+      <div class="radar-layout">
+        <!-- Radar Top Header Stats -->
+        <div class="radar-stats-grid">
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">📡</span>
+              <span class="stat-pill stat-pill-green">+24.8% Live Spike</span>
+            </div>
+            <div class="stat-num">16.4M</div>
+            <div class="stat-title">Tracked Reels Engagements</div>
+            <div class="stat-desc">Analyzed across TikTok, IG Reels &amp; YT Shorts</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">🎯</span>
+              <span class="stat-pill stat-pill-blue">89.4% Avg</span>
+            </div>
+            <div class="stat-num">91.2%</div>
+            <div class="stat-title">CS Curiosity Conversion Rate</div>
+            <div class="stat-desc">Casual viewers bridged to hands-on tech deep dives</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">🛡️</span>
+              <span class="stat-pill stat-pill-purple">100% Filtered</span>
+            </div>
+            <div class="stat-num">0%</div>
+            <div class="stat-title">Clickbait / Hype Allowed</div>
+            <div class="stat-desc">Strict adherence to core engineering foundations</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">⚡</span>
+              <span class="stat-pill stat-pill-amber">Instantaneous</span>
+            </div>
+            <div class="stat-num">&lt; 150ms</div>
+            <div class="stat-title">Real-Time Ingestion Latency</div>
+            <div class="stat-desc">Telemetry-to-Bridge inference turnaround</div>
+          </div>
+        </div>
+
+        <!-- Trending Topics & CS Mappings Table Card -->
+        <div class="panel-card radar-table-card">
+          <div class="radar-header-row">
+            <div>
+              <h3 class="panel-heading">Live Viral Topics &amp; Inferred CS Curriculum Mappings</h3>
+              <p class="results-count">Real-time social media hashtag velocity and AI-predicted scaffolding targets</p>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="btnRefreshTrends">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+              <span>Refresh Trends</span>
+            </button>
+          </div>
+
+          <div class="trend-table-wrapper">
+            <table class="trend-table">
+              <thead>
+                <tr>
+                  <th>Hashtag &amp; Trend</th>
+                  <th>Platform</th>
+                  <th>Growth Velocity</th>
+                  <th>Weekly Volume</th>
+                  <th>Inferred CS Discipline &amp; Target Concept</th>
+                  <th>Conversion</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="trendTableBody">
+                <!-- Populated via API -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ======================================================= -->
+    <!-- VIEW 4: GEMINI VEO AI REELS STUDIO & 4K THEATER         -->
+    <!-- ======================================================= -->
+    <main class="app-view hidden" id="viewVeo">
+      <div class="veo-studio-layout">
+        <!-- Hero Header -->
+        <div class="veo-hero-card">
+          <div class="veo-hero-top">
+            <div class="veo-brand-badge">
+              <span class="veo-sparkle-spin">✨</span>
+              <span>GOOGLE GEMINI VEO 2 AI VIDEO REELS</span>
+              <span class="veo-pill-tag">4K 60FPS 9:16</span>
+            </div>
+            <div class="veo-meta-chips">
+              <span class="veo-chip"><span class="pulse-dot green"></span> Generative Video Engine Active</span>
+              <span class="veo-chip">Raytraced 3D Shaders</span>
+              <span class="veo-chip">Synchronized Voiceover &amp; Subtitles</span>
+            </div>
+          </div>
+          <p class="veo-hero-desc">
+            Transforming casual software developer curiosity into hyper-realistic 9:16 vertical 3D cinematic explanation reels. Generated with <strong>Google Gemini Veo 2</strong>, featuring production-grade camera directions, procedural 3D visualizations, and zero-hype computer science depth.
+          </p>
+
+          <!-- Custom Generator Input Bar -->
+          <div class="veo-generator-bar">
+            <div class="veo-input-wrap">
+              <span class="veo-input-icon">🎬</span>
+              <input type="text" id="veoCustomTopicInput" class="form-input veo-search-input" placeholder="Enter any CS concept (e.g. Transformer KV-Cache, Raft Consensus, Linux eBPF, CPU Cache Lines)..." value="Under the Hood of Transformers: Self-Attention Math, Context Windows & KV-Cache Latency">
+            </div>
+            <div class="veo-cat-select-wrap">
+              <select id="veoCategorySelect" class="form-input veo-category-select">
+                <option value="AI">🧠 AI &amp; Transformers</option>
+                <option value="HLD">🏗️ High Level Design (HLD)</option>
+                <option value="DSA">⚡ DSA &amp; Memory Locality</option>
+                <option value="Java">☕ JVM &amp; Compiler ASTs</option>
+                <option value="Cybersecurity">🛡️ Cybersecurity &amp; TLS 1.3</option>
+                <option value="Cloud">☁️ Cloud &amp; Linux Kernels</option>
+                <option value="Hardware">💻 Hardware &amp; Microarchitecture</option>
+              </select>
+            </div>
+            <button class="btn btn-primary btn-glow" id="btnGenerateVeoCustom">
+              <span class="veo-sparkle">✨</span>
+              <span>Generate Gemini Veo Reel</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Studio Grid: Left Theater, Right Storyboard -->
+        <div class="veo-main-grid">
+          <!-- Left Column: 9:16 Cinematic Video Theater -->
+          <div class="veo-theater-column">
+            <div class="veo-player-container">
+              <!-- Camera Telemetry Overlay -->
+              <div class="veo-hud-header">
+                <div class="hud-left">
+                  <span class="rec-dot"></span>
+                  <span class="hud-text">VEO 2 • 4K UHD 60FPS</span>
+                </div>
+                <div class="hud-center" id="veoCamHud">CAM_01 [WIDE DOLLY IN 24MM]</div>
+                <div class="hud-right">
+                  <span class="hud-aspect">9:16 VER</span>
+                </div>
+              </div>
+
+              <!-- 60 FPS Procedural Simulation Canvas -->
+              <div class="veo-screen-viewport" id="veoScreenViewport">
+                <canvas id="veoCanvas" width="360" height="640"></canvas>
+
+                <!-- Subtitles Banner -->
+                <div class="veo-subtitles-bar" id="veoSubtitlesBar">
+                  <span id="veoSubtitleText">Token Ingestion: Mapping words to geometric vectors in high-dimensional space.</span>
+                </div>
+
+                <!-- Floating Watermark -->
+                <div class="veo-watermark">
+                  <span>Gemini Veo 2</span>
+                </div>
+              </div>
+
+              <!-- Video Timeline Progress Bar -->
+              <div class="veo-timeline-track">
+                <div class="veo-timeline-progress" id="veoTimelineProgress"></div>
+              </div>
+
+              <!-- Interactive Keyframe Timeline Navigator -->
+              <div class="veo-keyframes-bar" id="veoKeyframesBar">
+                <button class="keyframe-chip active" data-sec="0.0" id="kfChip0">
+                  <span class="kf-time">0.0s</span>
+                  <span class="kf-label">1. Hook &amp; CS Primitive</span>
+                </button>
+                <button class="keyframe-chip" data-sec="4.5" id="kfChip1">
+                  <span class="kf-time">4.5s</span>
+                  <span class="kf-label">2. Architecture &amp; Data Flow</span>
+                </button>
+                <button class="keyframe-chip" data-sec="9.5" id="kfChip2">
+                  <span class="kf-time">9.5s</span>
+                  <span class="kf-label">3. Production Scale Resolution</span>
+                </button>
+              </div>
+
+              <!-- Player Bottom Control Panel -->
+              <div class="veo-controls-panel">
+                <div class="veo-playback-buttons">
+                  <button class="btn btn-secondary btn-sm" id="btnVeoPlayPause" title="Play/Pause">
+                    <span id="veoPlayIcon">⏸️</span>
+                    <span id="veoPlayLabel">Pause</span>
+                  </button>
+                  <button class="btn btn-ghost btn-sm" id="btnVeoReplay" title="Replay from start">
+                    🔄 Replay
+                  </button>
+                  <button class="btn btn-ghost btn-sm" id="btnVeoVoiceToggle" title="Toggle AI Voiceover Narration">
+                    <span id="veoVoiceIcon">🗣️</span>
+                    <span id="veoVoiceLabel">Voice ON</span>
+                  </button>
+                </div>
+
+                <!-- Voiceover Audio Frequency Spectrum -->
+                <div class="veo-audio-spectrum" id="veoAudioSpectrum" title="Synthesized Voice Frequency Spectrum">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Veo Prompt & Storyboard Inspector -->
+          <div class="veo-inspector-column">
+            <!-- Active Concept Info Card -->
+            <div class="panel-card veo-info-card">
+              <div class="card-header-row">
+                <span class="category-tag" id="veoActiveCategoryTag">AI</span>
+                <span class="badge" style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6;" id="veoModelBadge">Google Gemini Veo 2 Engine</span>
+              </div>
+              <h3 class="veo-concept-title" id="veoActiveConceptTitle">Under the Hood of Transformers: Self-Attention Math, Context Windows &amp; KV-Cache Latency</h3>
+              <p class="veo-summary-text" id="veoActiveSummary">AI Generated Gemini Veo 4K explanation for Under the Hood of Transformers</p>
+            </div>
+
+            <!-- Veo 2 Prompt & Camera Directions Code Card -->
+            <div class="panel-card veo-prompt-card">
+              <div class="veo-prompt-header">
+                <div class="veo-prompt-title-wrap">
+                  <span class="veo-sparkle">✨</span>
+                  <strong>Gemini Veo 2 Cinematographic Prompt &amp; Shaders</strong>
+                </div>
+                <div class="veo-prompt-actions">
+                  <button class="btn btn-secondary btn-sm" id="btnCopyVeoPrompt" title="Copy Veo 2 Prompt">
+                    📋 Copy Prompt
+                  </button>
+                  <button class="btn btn-secondary btn-sm" id="btnExportVeoStudio" title="Export Formatted Prompt for Google AI Studio">
+                    🚀 Studio Export
+                  </button>
+                </div>
+              </div>
+
+              <div class="veo-prompt-specs-grid">
+                <div class="spec-item">
+                  <span class="spec-label">Camera Motion:</span>
+                  <span class="spec-val" id="veoSpecCamera">FPV Dolly In -> Orbit Matrix Core -> Pull Back Wide</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Lighting Shader:</span>
+                  <span class="spec-val" id="veoSpecLighting">Volumetric Dual-Tone (Neon Cyan &amp; Violet)</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Aspect &amp; FPS:</span>
+                  <span class="spec-val" id="veoSpecAspect">9:16 Vertical • 4K UHD 60FPS</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Color Grading:</span>
+                  <span class="spec-val" id="veoSpecColor">Cyberpunk Slate Dark Mode</span>
+                </div>
+              </div>
+
+              <div class="veo-prompt-code-box">
+                <pre><code id="veoPromptCodeText">Cinematic 4K 60fps 9:16 vertical camera pan through a glowing holographic transformer neural network architecture...</code></pre>
+              </div>
+            </div>
+
+            <!-- Keyframe Storyboard Breakdown -->
+            <div class="panel-card veo-storyboard-card">
+              <h4 class="card-title">🎬 3-Stage Keyframe Storyboard &amp; Narration Script</h4>
+              <div class="storyboard-list" id="veoStoryboardList">
+                <!-- Dynamically populated keyframe cards -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curated Masterclass Showcase Gallery -->
+        <div class="veo-gallery-section">
+          <div class="veo-gallery-header">
+            <div>
+              <h3 class="panel-heading">🌟 Curated Gemini Veo 4K Tech Masterclass Gallery</h3>
+              <p class="results-count">Click any masterclass reel below to immediately load and stream its 4K 3D visualization and voiceover script</p>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="btnRefreshVeoGallery">
+              🔄 Refresh Gallery
+            </button>
+          </div>
+
+          <div class="veo-gallery-grid" id="veoGalleryGrid">
+            <!-- Populated dynamically with Veo masterclass cards -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ======================================================= -->
+    <!-- VIEW 5: INSTAGRAM TECH REELS SHOWCASE & THEATER         -->
+    <!-- ======================================================= -->
+    <main class="app-view hidden" id="viewInsta">
+      <div class="insta-showcase-layout">
+        <!-- Instagram Hero Banner -->
+        <div class="insta-hero-card">
+          <div class="insta-hero-top">
+            <div class="insta-brand-badge">
+              <span class="ig-gradient-logo" style="width: 32px; height: 32px; font-size: 1.2rem;">📸</span>
+              <span>INSTAGRAM TECH REELS HUB</span>
+              <span class="ig-liked-count-badge" id="igHeroStatusBadge">Synced to @developer_alex</span>
+            </div>
+            <div class="veo-meta-chips">
+              <span class="veo-chip"><span class="pulse-dot green"></span> Live Instagram Graph Sync</span>
+              <span class="veo-chip">Verified Tech Creators</span>
+              <span class="veo-chip">Instant AI CS Bridges</span>
+            </div>
+          </div>
+          <p class="veo-hero-desc">
+            Explore and watch viral computer science and software engineering Instagram Reels. Like any reel to automatically sync it to your learning profile and generate deep-dive educational pathways.
+          </p>
+
+          <!-- Category Filter Bar -->
+          <div class="insta-filter-bar" id="instaFilterBar">
+            <button class="insta-filter-chip active" data-filter="all">🔥 All Tech Reels</button>
+            <button class="insta-filter-chip" data-filter="liked">❤️ My Liked on Insta (<span id="instaLikedCountFilter">0</span>)</button>
+            <button class="insta-filter-chip" data-filter="AI">🧠 AI &amp; Transformers</button>
+            <button class="insta-filter-chip" data-filter="HLD">🏗️ System Design &amp; Cloud</button>
+            <button class="insta-filter-chip" data-filter="DSA">⚡ Algorithms &amp; DSA</button>
+            <button class="insta-filter-chip" data-filter="Java">☕ Java &amp; Compilers</button>
+            <button class="insta-filter-chip" data-filter="Hardware">💻 Hardware &amp; Chips</button>
+          </div>
+
+          <!-- Instagram AI Suggestion Agent Card -->
+          <div class="insta-ai-agent-banner">
+            <div class="iaa-left">
+              <div class="iaa-icon-wrap">🤖</div>
+              <div>
+                <div class="iaa-title">Antigravity Instagram AI Recommendation Agent</div>
+                <div class="iaa-desc" id="instaAiAgentReasoning">Analyzing your liked reels to suggest personalized, non-repeating tech reels...</div>
+              </div>
+            </div>
+            <div class="iaa-actions">
+              <button class="btn btn-primary btn-sm btn-glow" id="btnInstaAiSuggest">
+                <span>✨ AI Suggest Next Reel</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instagram 2-Column Theater & Grid -->
+        <div class="insta-content-grid">
+          <!-- Left: Active Instagram Reel Theater Player -->
+          <div class="insta-theater-column">
+            <div class="insta-phone-player" id="instaPhonePlayer">
+              <!-- Creator Row -->
+              <div class="insta-player-header">
+                <div class="insta-creator-info">
+                  <div class="insta-creator-avatar" id="instaPlayerAvatar">☕</div>
+                  <div>
+                    <div class="insta-creator-name-row">
+                      <span id="instaPlayerCreator">@dev_humor</span>
+                      <span class="ig-verified">✓</span>
+                    </div>
+                    <div class="insta-audio-track">
+                      <span>🎵</span> <span id="instaPlayerAudio">Original Audio - Java Pain</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn-ig-follow" id="btnIgFollow">Follow</button>
+              </div>
+
+              <!-- Interactive 3D Canvas Viewport -->
+              <div class="insta-screen-viewport">
+                <canvas id="instaReelCanvas" width="360" height="580"></canvas>
+                <div class="insta-heart-overlay" id="instaHeartOverlay"></div>
+                
+                <!-- Instagram Actions Bar (Right) -->
+                <div class="insta-player-actions">
+                  <button class="insta-act-btn" id="btnInstaLike" title="Like on Instagram">
+                    <span class="act-icon" id="instaLikeIcon">🤍</span>
+                    <span id="instaLikeCount">42.1K</span>
+                  </button>
+                  <button class="insta-act-btn" id="btnInstaComment" title="View Comments">
+                    <span class="act-icon">💬</span>
+                    <span>1.2K</span>
+                  </button>
+                  <button class="insta-act-btn" id="btnInstaShare" title="Share Reel">
+                    <span class="act-icon">↗️</span>
+                    <span>Share</span>
+                  </button>
+                  <button class="insta-act-btn" id="btnInstaBookmark" title="Save">
+                    <span class="act-icon" id="instaSaveIcon">🔖</span>
+                    <span>Save</span>
+                  </button>
+                </div>
+
+                <!-- Instagram Caption Overlay (Bottom) -->
+                <div class="insta-caption-overlay">
+                  <div class="insta-caption-title" id="instaPlayerTitle">POV: You forgot a semicolon in Java</div>
+                  <div class="insta-caption-desc" id="instaPlayerDesc">Why does missing one semicolon break 400 lines of code?! 😭 #javameme #codinglife #programming</div>
+                  <div class="insta-ai-bridge-pill" id="instaAiBridgePill">
+                    <span>🧠 AI Bridge: Compiler Lexical Analysis &amp; AST Trees</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Playback & AI Action Bar -->
+              <div class="insta-player-bottom-bar">
+                <button class="btn btn-primary btn-sm btn-glow" id="btnLaunchInstaAiBridge">
+                  <span>⚡ Deep Dive AI Concept</span>
+                </button>
+                <button class="btn btn-secondary btn-sm" id="btnInstaNextReel">
+                  <span>Next Reel ▼</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Instagram Reels Gallery Stream -->
+          <div class="insta-gallery-column">
+            <div class="insta-gallery-header-row">
+              <h4 class="card-title">📱 Trending Technical Instagram Reels (<span id="instaGalleryTotal">0</span>)</h4>
+              <span class="ig-sync-live-badge"><span class="pulse-dot"></span> LIVE DISCOVERY</span>
+            </div>
+            <div class="insta-reels-grid" id="instaReelsGrid">
+              <!-- Populated dynamically with Instagram cards -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div> <!-- End .layout-wrapper -->
+
+  <!-- ======================================================= -->
+  <!-- MODAL: GEMINI VEO 4K THEATER MODAL (OMNIPRESENT LAUNCH)  -->
+  <!-- ======================================================= -->
+  <div class="modal-overlay hidden" id="veoModal">
+    <div class="modal-card modal-card-lg veo-modal-card">
+      <div class="modal-header">
+        <div class="modal-badge-row">
+          <span class="badge" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(236, 72, 153, 0.25)); color: #fff;">
+            ✨ Google Gemini Veo 2 AI Reel Player
+          </span>
+          <span class="badge badge-accent">4K 60FPS 9:16</span>
+        </div>
+        <button class="modal-close-btn" id="veoModalCloseBtn" type="button">&times;</button>
+      </div>
+
+      <div class="modal-body veo-modal-body">
+        <div class="veo-modal-grid">
+          <!-- Left: Modal Player -->
+          <div class="veo-modal-player-wrap">
+            <div class="veo-player-container modal-player">
+              <div class="veo-hud-header">
+                <span class="rec-dot"></span>
+                <span class="hud-text">VEO 2 • 4K UHD</span>
+                <span class="hud-center" id="veoModalCamHud">CAM_01 [ORBIT 45°]</span>
+              </div>
+              <div class="veo-screen-viewport modal-viewport">
+                <canvas id="veoModalCanvas" width="360" height="640"></canvas>
+                <div class="veo-subtitles-bar">
+                  <span id="veoModalSubtitleText">Connecting to foundational systems architecture...</span>
+                </div>
+              </div>
+              <div class="veo-timeline-track">
+                <div class="veo-timeline-progress" id="veoModalTimelineProgress"></div>
+              </div>
+              <div class="veo-controls-panel">
+                <button class="btn btn-secondary btn-sm" id="btnVeoModalPlayPause">⏸️ Pause</button>
+                <button class="btn btn-ghost btn-sm" id="btnVeoModalReplay">🔄 Replay</button>
+                <button class="btn btn-ghost btn-sm" id="btnVeoModalVoiceToggle">🗣️ Voice ON</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Modal Details & Prompt -->
+          <div class="veo-modal-details-wrap">
+            <span class="category-tag" id="veoModalCategoryTag">AI</span>
+            <h3 class="veo-concept-title" id="veoModalTitle">Loading Concept...</h3>
+            <p class="veo-summary-text" id="veoModalSummary">Synthesizing Gemini Veo 3D explanation...</p>
+
+            <div class="modal-section">
+              <h5>🎬 Scene Breakdown</h5>
+              <div class="storyboard-list" id="veoModalStoryboardList"></div>
+            </div>
+
+            <div class="modal-section">
+              <h5>✨ Veo 2 Prompt</h5>
+              <div class="veo-prompt-code-box">
+                <pre><code id="veoModalPromptText">Loading prompt...</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btnVeoModalCopyPrompt">📋 Copy Veo Prompt</button>
+        <button class="btn btn-primary btn-glow" id="btnVeoModalGoToStudio">Open Full Veo Studio</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================= -->
+  <!-- MODAL: ADD N REELS BY INTEREST                          -->
+  <!-- ======================================================= -->
+  <div class="modal-overlay hidden" id="addReelsModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <div class="modal-badge-row">
+          <span class="badge badge-accent">🎯 Interest-Driven Feed Synthesizer</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">Zero-Repeat Guaranteed</span>
+        </div>
+        <button class="modal-close-btn" id="addReelsModalCloseBtn" type="button">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <h2 class="modal-title">Add N Reels Tailored to Your Interests</h2>
+        <p class="modal-subtitle">Select your target engineering domains or type custom keywords. The agent generates N unique interactive reels and injects them directly into your browser stream.</p>
+
+        <!-- Domain Selection Chips -->
+        <div class="modal-section">
+          <h5>1. Choose Topic &amp; Discipline Areas</h5>
+          <div class="interest-chips-grid" id="interestChipsContainer">
+            <button type="button" class="interest-chip active" data-interest="AI">🧠 AI &amp; Transformers</button>
+            <button type="button" class="interest-chip active" data-interest="HLD">🏗️ High Level System Design</button>
+            <button type="button" class="interest-chip" data-interest="DSA">⚡ DSA &amp; Complexity</button>
+            <button type="button" class="interest-chip" data-interest="Cybersecurity">🛡️ Cybersecurity &amp; TLS</button>
+            <button type="button" class="interest-chip" data-interest="Cloud">☁️ Cloud &amp; Linux Kernels</button>
+            <button type="button" class="interest-chip" data-interest="Hardware">💻 Hardware &amp; Microarchitecture</button>
+            <button type="button" class="interest-chip" data-interest="Java">☕ JVM &amp; Backend Mechanics</button>
+            <button type="button" class="interest-chip" data-interest="Career">🚀 Staff Engineering &amp; Scale</button>
+          </div>
+        </div>
+
+        <!-- Custom Keyword Input -->
+        <div class="modal-section">
+          <h5>2. Custom Keywords / Specific Topics (Optional)</h5>
+          <input type="text" id="customInterestKeywords" class="form-input" placeholder="e.g. eBPF, Raft consensus, GPU VRAM caching, WebAssembly, B-Trees...">
+        </div>
+
+        <!-- Number of Reels (N) Selector -->
+        <div class="modal-section">
+          <h5>3. Number of Reels to Add (N)</h5>
+          <div class="count-selector-row">
+            <div class="count-buttons-group">
+              <button type="button" class="btn btn-secondary count-btn" data-count="1">1 Reel</button>
+              <button type="button" class="btn btn-secondary count-btn active" data-count="3">3 Reels</button>
+              <button type="button" class="btn btn-secondary count-btn" data-count="5">5 Reels</button>
+              <button type="button" class="btn btn-secondary count-btn" data-count="10">10 Reels</button>
+            </div>
+            <div class="custom-count-wrap">
+              <label for="customCountInput">Custom N:</label>
+              <input type="number" id="customCountInput" class="form-input count-number-input" min="1" max="30" value="3">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="addReelsCancelBtn">Cancel</button>
+        <button class="btn btn-primary btn-glow" id="btnGenerateReelsSubmit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span id="generateSubmitLabel">Generate &amp; Add 3 Reels to Feed</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================= -->
+  <!-- MODAL: WATCHED HISTORY & ANTI-REPEAT TRACKER            -->
+  <!-- ======================================================= -->
+  <div class="modal-overlay hidden" id="historyModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-badge-row">
+          <span class="badge badge-accent">📊 Watched History &amp; Anti-Repeat Radar</span>
+        </div>
+        <button class="modal-close-btn" id="historyModalCloseBtn" type="button">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <h2 class="modal-title">Watched Reels History</h2>
+        <p class="modal-subtitle">The recommendation agent tracks all completed and seen reels to guarantee zero duplicates.</p>
+
+        <div class="history-stats-bar">
+          <div><strong id="historyUniqueCount">1</strong> <span>Unique Watched</span></div>
+          <div><strong style="color: #10b981;">0</strong> <span>Repeats (100% Filtered)</span></div>
+          <div><strong id="historyTopCategory" style="color: #8b5cf6;">Java</strong> <span>Top Affinity</span></div>
+        </div>
+
+        <div class="modal-section">
+          <h5>Seen Reels Registry</h5>
+          <div class="history-list-container" id="historyListContainer">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary btn-sm" id="btnClearHistoryBtn">🗑️ Reset Watched History</button>
+        <button class="btn btn-primary btn-sm" id="historyDoneBtn">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================= -->
+  <!-- MODAL: INTERACTIVE MICRO-LAB & 15-MIN CHALLENGE         -->
+  <!-- ======================================================= -->
+  <div class="modal-overlay hidden" id="deepDiveModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-badge-row">
+          <span class="category-tag" id="modalCategoryTag">AI</span>
+          <span class="difficulty-tag" id="modalDifficultyTag">Intermediate</span>
+          <span class="badge badge-accent">Interactive Micro-Lab</span>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" type="button">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <h2 class="modal-title" id="modalConceptTitle">Concept Scaffolding &amp; Prerequisite Roadmap</h2>
+        <p class="modal-target-rec" id="modalTargetRec">Recommended Topic</p>
+
+        <!-- Live Interactive Visualizer / Sandbox Canvas -->
+        <div class="modal-section sandbox-section">
+          <div class="sandbox-header">
+            <h5>🧪 In-Browser Concept Visualizer &amp; Sandbox</h5>
+            <span class="sandbox-pill" id="sandboxStatusPill">Live Simulation</span>
+          </div>
+          <div class="sandbox-canvas" id="sandboxCanvas">
+            <!-- Dynamically populated interactive demo based on topic -->
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h5>📚 Foundational Prerequisites</h5>
+          <ul class="prereq-list" id="modalPrereqList">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+
+        <div class="modal-section challenge-box">
+          <h5>⚡ 15-Minute Hands-On Scaffolding Challenge</h5>
+          <p id="modalChallengeText">Write a code snippet or inspection script to apply this concept directly.</p>
+        </div>
+
+        <div class="modal-section">
+          <h5>🏢 Industry &amp; Real-World Systems Relevance</h5>
+          <p class="industry-text" id="modalIndustryText">Explaining how top tech engineering systems utilize this foundation.</p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="modalCopyChallengeBtn">
+          📋 Copy Challenge
+        </button>
+        <button class="btn btn-primary" id="modalDoneBtn">
+          Got it, Back to Feed
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instagram Account Connection & Synced Likes Modal -->
+  <div class="modal-overlay hidden" id="instagramModal">
+    <div class="modal-card instagram-modal-card">
+      <div class="modal-header">
+        <div class="modal-title-row">
+          <span class="ig-gradient-logo">📸</span>
+          <div>
+            <h4>Instagram Reel Sync &amp; Liked History</h4>
+            <p class="modal-subtitle">Track your liked reels on Instagram and automatically generate AI technical learning pathways</p>
+          </div>
+        </div>
+        <button class="btn-icon" id="instagramModalCloseBtn" title="Close">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Account Status Banner -->
+        <div class="ig-account-banner" id="igAccountBanner">
+          <div class="ig-user-info">
+            <div class="ig-avatar" id="igUserAvatar">📸</div>
+            <div>
+              <div class="ig-user-handle" id="igUserHandle">@developer_alex</div>
+              <div class="ig-user-bio" id="igUserBio">Connected • Real-time Like Synchronization Active</div>
+            </div>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="btnDisconnectIg">Disconnect</button>
+        </div>
+
+        <!-- Connect Form (Visible when disconnected) -->
+        <div class="ig-connect-form hidden" id="igConnectForm">
+          <div class="form-group">
+            <label for="igUsernameInput">Enter Your Instagram Handle</label>
+            <div class="input-with-action">
+              <input type="text" id="igUsernameInput" class="form-input" placeholder="@your_instagram_handle" value="@developer_alex">
+            </div>
+            <p class="field-hint">We simulate Instagram Graph API webhooks to track which technical reels you like in real-time.</p>
+          </div>
+          <button class="btn btn-primary" id="btnSubmitIgConnect">
+            <span>📸 Link Instagram Account</span>
+          </button>
+        </div>
+
+        <!-- Liked Reels Stream -->
+        <div class="ig-liked-section">
+          <div class="ig-section-header">
+            <h5>❤️ Your Synced Liked Reels (<span id="igTotalLikedCount">0</span>)</h5>
+            <span class="ig-sync-live-badge"><span class="pulse-dot"></span> LIVE SYNC ACTIVE</span>
+          </div>
+
+          <div class="ig-liked-list" id="igLikedList">
+            <!-- Dynamically populated liked reels -->
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btnExportIgDossier">
+          📋 Export Liked Reels Report
+        </button>
+        <button class="btn btn-secondary" id="btnOpenInstaFeedFromModal">
+          📸 Watch in Instagram Reels Feed
+        </button>
+        <button class="btn btn-primary" id="btnDoneIgModal">
+          Back to Feed
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
