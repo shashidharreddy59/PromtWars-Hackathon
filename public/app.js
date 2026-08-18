@@ -428,6 +428,40 @@ function setupNavigation() {
     });
   });
 
+  // Theme Mode Toggle (Midnight Dark / Clean Light)
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const themeIcon = document.getElementById('themeIcon');
+  const themeLabel = document.getElementById('themeLabel');
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      document.body.classList.remove('theme-dark');
+      document.body.classList.add('theme-light');
+      if (themeIcon) themeIcon.textContent = '☀️';
+      if (themeLabel) themeLabel.textContent = 'Light';
+    } else {
+      document.body.classList.remove('theme-light');
+      document.body.classList.add('theme-dark');
+      if (themeIcon) themeIcon.textContent = '🌙';
+      if (themeLabel) themeLabel.textContent = 'Dark';
+    }
+  }
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem('ai_reel_theme') || 'dark';
+  applyTheme(savedTheme);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      playSound('click');
+      const isCurrentlyDark = document.body.classList.contains('theme-dark') || !document.body.classList.contains('theme-light');
+      const newTheme = isCurrentlyDark ? 'light' : 'dark';
+      applyTheme(newTheme);
+      localStorage.setItem('ai_reel_theme', newTheme);
+      showToast(`Theme switched to ${newTheme === 'light' ? 'Clean Light ☀️' : 'Midnight Dark 🌙'}`, newTheme === 'light' ? '☀️' : '🌙');
+    });
+  }
+
   // Sound Toggle
   soundToggleBtn.addEventListener('click', () => {
     soundEnabled = !soundEnabled;
