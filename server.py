@@ -18,7 +18,7 @@ from reel_agent import (
 )
 
 app = FastAPI(
-    title="Antigravity AI Reel Recommendation Agent",
+    title="AI Reel Predictor",
     description="Transforms passive student reel engagement into high-signal educational tech learning pathways.",
     version="1.0.0"
 )
